@@ -1,0 +1,21 @@
+import requests
+import random
+
+tok = input('[~] توكن البوت : ')
+ID = input('[~] ايديك :')
+i =int(input('[~] عدد الحسابات : '))
+for i in range(i):
+ user = '1234567890'
+ us = str(''.join((random.choice(user) for i in range(7))))
+ username = '+20122' + us
+ password = '0122' + us
+ us4 = str(''.join((random.choice(user) for i in range(8))))
+ tlg =(f'''https://api.telegram.org/bot{tok}/sendMessage?chat_id={ID}&text=ᯓ ʟᴏɢɪɴ » Facebook\n
+كارل صادلك حساب تيك توك🔱
+🔱 • 𝙴𝚖𝚊𝚒𝚕 ☞{username}
+🔱 • 𝙿𝚊𝚜𝚜𝚠𝚘𝚛𝚍 ☞ +{us4}
+🔱 • 𝙲𝚘𝚞𝚗𝚝𝚛𝚢 ☞ Egypt
+🔱 • 𝙲𝚘𝚍𝚎 ☞ +20 
+🔱 • 𝒕𝒊𝒎𝒆 ☞ 2021-10-12
+ᯓ CH :@GG4RT/ @GG4RT''')
+ i = requests.post(tlg)

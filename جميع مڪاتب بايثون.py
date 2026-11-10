@@ -1,0 +1,11 @@
+import os
+print(" يتم تثبيت جميع المكاتب مقدم من @m0863em")
+os.system('pip install user_agent ')
+os.system('pip install requests')
+os.system('pip install random')
+os.system('pip install threading')
+os.system('pip install os')
+os.system('pip install json')
+os.system('pip install generate_user_agent')
+os.system('pip install AegosPy')
+print("تم تثبيت المكاتب بنجاح @m08633m")

